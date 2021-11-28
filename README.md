@@ -1,6 +1,6 @@
 # Checkout the App here:
 
-https://netflix-clone-38a22.web.app/
+https://netflix-clone-20cea.web.app/
 
 # Getting Started with Create React App
 
