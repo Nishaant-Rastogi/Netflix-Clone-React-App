@@ -15,7 +15,7 @@ const Row = ({ title, fetchURL, isLargeRow }) => {
             const request = await axios.get(fetchURL);
             console.log(request);
             setMovies(request.data.results);
-            return request;
+            // return request;
         }
         fetchData();
     }, [fetchURL]);
@@ -31,11 +31,15 @@ const Row = ({ title, fetchURL, isLargeRow }) => {
         if (trailerURL) {
             setTrailerURL("");
         } else {
-            movieTrailer(movie?.name || "")
+            movieTrailer(movie?.title || movie?.original_title || movie?.name || movie?.original_name)
                 .then(url => {
                     const urlParams = new URLSearchParams(new URL(url).search);
+                    console.log(urlParams.get('v'));
                     setTrailerURL(urlParams.get('v'));
-                }).catch(error => console.log(error))
+                }).catch(error => {
+                    setTrailerURL("dQw4w9WgXcQ")
+                    console.log(error)
+                })
         }
     }
     return (

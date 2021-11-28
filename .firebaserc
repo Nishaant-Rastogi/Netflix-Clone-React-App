@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "netflix-clone-38a22"
-  }
+    "default": "netflix-clone-20cea",
+    "netflix-clone": "netflix-clone-20cea"
+  },
+  "targets": {}
 }
